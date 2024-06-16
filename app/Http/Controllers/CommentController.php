@@ -38,7 +38,7 @@ class CommentController extends Controller
 
     public function destroy(Comment $comment)
     {
-        if (Auth::check() && Auth::user()->usertype == 'user') { // siin pead usertypei 'user'iks muutma, et saaks kustutada, muna ple admin
+        if (Auth::check() && Auth::user()->usertype == 'admin') { // siin pead usertypei 'user'iks muutma, et saaks kustutada, muna ple admin
             $comment->delete();
             return back()->with('success', 'Kommentaar kustutatud.');
         } elseif(Auth::check() && Auth::user()->usertype == 'user') {
