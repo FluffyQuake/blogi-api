@@ -6,7 +6,7 @@
                         <option value="">Select api</option>
                         <option value="lurescape">Kalaaaa</option>
                         <option value="mannicoon">Kiiiisu</option>
-                        <option value="song">Minu api</option>
+                        <option value="phone">Minu api</option>
                     </select>
                     <input
                         type="number"
