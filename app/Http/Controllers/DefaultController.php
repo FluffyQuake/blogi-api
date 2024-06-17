@@ -12,8 +12,8 @@ class DefaultController extends Controller
         return $response->json();
     } 
 
-    private function song($limit) {
-        $response = Http::get('https://api-ralf.tak21timofejev.itmajakas.ee/api/song?limit=' . $limit);
+    private function phone($limit) {
+        $response = Http::get('https://api.tak21vakkum.itmajakas.ee/api/phone?limit=' . $limit);
 
         return $response->json();
     } 
@@ -36,8 +36,8 @@ class DefaultController extends Controller
             $response = $this->lurescape($limit);
         } else if (request()->get('whatapi') == 'mannicoon'){
             $response = $this->mannicoon($limit);
-        } else if (request()->get('whatapi') == 'song'){
-            $response = $this->song($limit);                        
+        } else if (request()->get('whatapi') == 'phone'){
+            $response = $this->phone($limit);                        
         } else {
             $response = response()->json('vali api palun', 400);
         }

@@ -56,19 +56,18 @@
 
                 <div
                 class=""
-                    v-if="whatapi == 'song'"
+                    v-if="whatapi == 'phone'"
                     v-for="data in apiData"
                     :key="data.id"
                 >
                     <div class="">
-                        <div class="w-24 h-24">
-                            <img :src="data?.image_url" :alt="data?.name" />
-                        </div>
 
                         <div>
-                            <h1 class="text-xl">{{ data?.title }}</h1>
-                            <p class="text-lg text-gray-700">{{ data?.artist }}</p>
-                            <p class="text-md text-gray-800">{{ data?.uploaded_at }}</p>
+                            <h1 class="text-xl">{{ data?.name }}</h1>
+                            <p class="text-lg text-gray-700">{{ data?.model }}</p>
+                            <p class="text-md text-gray-800">{{ data?.price }}</p>
+                            <p class="text-md text-gray-800">{{ data?.storage }}</p>
+                            <p class="text-md text-gray-800">{{ data?.screen }}</p>
                         </div>
                     </div>
                 </div>
